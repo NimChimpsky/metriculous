@@ -69,8 +69,15 @@ a:visited {
 }
 
 #title {
-    padding-left: 10%;
-    padding-right: 10%;
+    text-align: left;
+    font-family: Idler;
+    font-size: 2em;
+}
+
+#header {
+    text-align: right;
+    font-family: Idler;
+    font-size: 1.5em;
 }
 
 .rcorners {
