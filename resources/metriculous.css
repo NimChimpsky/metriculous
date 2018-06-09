@@ -15,6 +15,12 @@ a:visited {
     text-decoration: none
 }
 
+body {
+    background: url(background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .space {
     height: 30px;
 }
@@ -60,7 +66,7 @@ a:visited {
 .container {
     display: grid;
     /* Display as a Grid */
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     /* repeat = as many times as you can fit */
     /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
     /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
