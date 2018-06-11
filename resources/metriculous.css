@@ -22,6 +22,7 @@ body {
     background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
+
 .space {
     height: 30px;
 }
@@ -30,31 +31,6 @@ body {
     font-family: Idler;
 }
 
-.sub-heading {
-    font-family: Idler;
-    font-size: 1em;
-}
-
-/*.navbar{height: 30px;}*/
-.section {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-.roadmap {
-    text-align: left;
-    font-family: Arial;
-    font-size: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding-left: 0%;
-    width: 100%;
-}
 
 .content {
     text-align: left;
@@ -71,11 +47,11 @@ body {
     /* repeat = as many times as you can fit */
     /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
     /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
-    grid-gap: 10px;
+    grid-gap: 15px;
 }
 
 .transparent {
-    background-color: rgba(248, 248, 255, 0.4);
+    background-color: rgba(248, 248, 255, 0.2);
     border-radius: 10px;
     padding: 25px;
 }
@@ -86,16 +62,17 @@ body {
     font-size: 2em;
 }
 
+#contact-form {
+    text-align: left;
+    font-family: Idler;
+    font-size: 1.5em;
+}
 #header {
     text-align: right;
     font-family: Idler;
     font-size: 1.5em;
 }
 
-.rcorners {
-    border-radius: 5px;
-    border: 2px solid black;
-    padding: 5px;
-    width: 60px;
-    height: 25px;
+#desc {
+    text-align: center;
 }
