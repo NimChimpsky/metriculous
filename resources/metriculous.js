@@ -1,8 +1,4 @@
-/**
- * Created by stephenbatty on 11/06/2018.
- */
 function sendContactForm() {
-
     //if you are here this is just to hopefully reduce webscrapinga
     var decoded = atob("aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vc2JhdHR5K21ldHJpY3Vsb3VzQGdtYWlsLmNvbQ==");
     document.getElementById('contact-form').action = decoded;
