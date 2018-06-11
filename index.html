@@ -9,7 +9,7 @@
     <title>M E T R I C U L O U S</title>
 </head>
 <body style="background-color: ghostwhite;color:black" class="section">
-<div id="header"><a href="#examples">Examples</a>&nbsp;&nbsp;&nbsp;<a href="#contact-form">Contact</a>
+<div id="header"><a href="#examples">Examples</a>&nbsp;&nbsp;&nbsp;<a href="#contact-form-div">Contact</a>
 </div>
 <div id="title">
     <div><h1>M E T R I C U L O U S</h1></div>
@@ -47,11 +47,11 @@
     </div>
 </div>
 <div style="height: 15px;"></div>
-<div id="contact-form" class="transparent" style="width:250px;">
+<div id="contact-form-div" class="transparent" style="width:250px;">
     Contact us
-    <form action="https://formspree.io/sbatty+metriculous@gmail.com"
-          method="POST">
+    <form id="contact-form" action="" method="POST">
         <div>
+            <br/>
             <input type="email" size="20" name="_replyto" placeholder="your email"/>
         </div>
         <br/>
@@ -60,7 +60,7 @@
         </div>
         </br>
         <div>
-            <input type="submit" value="Send">
+            <input onmousedown="sendContactForm()" type="submit" value="Send">
         </div>
 
     </form>
