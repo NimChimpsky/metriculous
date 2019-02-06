@@ -10,14 +10,13 @@
     <title>M E T R I C U L O U S</title>
 </head>
 <body style="background-color: ghostwhite;color:black" class="section">
-<div id="header"><a href="#examples">Examples</a>&nbsp;&nbsp;&nbsp;<a href="#contact-form-div">Contact</a>
-</div>
+<!--<div id="header"><a href="#examples">Examples</a>&nbsp;&nbsp;&nbsp;<a href="#contact-form-div">Contact</a>-->
+<!--</div>-->
 <div id="title">
-    <div><h1>M E T R I C U L O U S</h1></div>
+    <div><h3>METRICULOUS</h3></div>
 </div>
 <div id="desc" class="container">
     <div class="transparent">
-
         <div>Stats on your code repository, packaged as a java microservice. <br/>
             Lightweight embedded web server and user interface.
         </div>
@@ -30,9 +29,16 @@
                 <div><img src="resources/download-green.svg" width="10%" alt="Kiwi standing on oval"></div>
                 <div> Download JAR</div>
             </a>
+            <br/>
+            <div><em>java -jar metriculous '/Users/yourName/myRepo/.git' 8080</em></div>
+            or on windows
+            <div><em>java -jar metriculous 'C:/yourName/myRepo/.git' 8080</em></div>
+            <br/>
+            Alternatively, a full settings and license file (human readable) can be placed in your home directory.
         </div>
     </div>
     <div class="transparent" style="text-align: left">
+        Selected Features
         <ul>
             <li>Most productive coders - number of lines in production, percentage of code that stays in production
                 without being refactored by someone else.
@@ -47,7 +53,7 @@
         <div>All presented with simple to read graphs and charts, and a http api for direct access to data.</div>
     </div>
 </div>
-<div style="height: 15px;"></div>
+
 <div id="contact-form-div" class="transparent" style="width:250px;">
     Contact us
     <form id="contact-form" action="" method="POST">

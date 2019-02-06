@@ -1,7 +1,7 @@
-@font-face {
-    font-family: Idler;
-    src: url("idler_inner.otf") format("opentype");
-}
+/*@font-face {*/
+/*font-family: Idler;*/
+/*src: url("idler_inner.otf") format("opentype");*/
+/*}*/
 
 a:link {
     /*font-family: Idler;*/
@@ -16,11 +16,11 @@ a:visited {
 }
 
 body {
-    background: url(background.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
+    /*background: url(background.png);*/
+    /*background-size: 100% 100%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*font-family: 'Roboto', sans-serif;*/
 }
 
 .space {
