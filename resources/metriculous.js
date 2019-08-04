@@ -4,3 +4,9 @@ function sendContactForm() {
     document.getElementById('contact-form').action = decoded;
 
 }
+
+function displayDownloadForm() {
+    console.log("display downlaod");
+    document.getElementById("rootBody").classList.toggle('fade');
+    document.getElementById("downloadForm").classList.toggle('fade');
+}

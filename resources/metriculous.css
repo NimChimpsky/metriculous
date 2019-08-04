@@ -67,3 +67,23 @@ body {
 #desc {
     text-align: center;
 }
+
+#downloadForm {
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    /*display: none;*/
+}
+
+#downloadForm.fade {
+    opacity: 1;
+}
+
+#rootBody {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#rootBody.fade {
+    opacity: 0;
+}

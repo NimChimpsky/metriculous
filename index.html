@@ -15,6 +15,8 @@
 <div id="title">
     <div><h3>METRICULOUS</h3></div>
 </div>
+<div id="downloadForm">Downlaod me</div>
+<div id="rootBody">
 <div id="desc" class="container">
     <div class="transparent">
         <div>Stats on your code repository, packaged as a java microservice. <br/>
@@ -25,7 +27,7 @@
         <div>
             <div><em>java -jar metriculous [your-local-git-dir] [port]</em></div>
             <br/>
-            <a href="resources/metriculous.jar">
+            <a href="#" onclick="displayDownloadForm()">
                 <div><img src="resources/download-green.svg" width="10%" alt="Kiwi standing on oval"></div>
                 <div> Download JAR</div>
             </a>
@@ -54,22 +56,23 @@
     </div>
 </div>
 
-<div id="contact-form-div" class="transparent" style="width:250px;">
-    Contact us
-    <form id="contact-form" action="" method="POST">
-        <div>
+    <div id="contact-form-div" class="transparent" style="width:250px;">
+        Contact us
+        <form id="contact-form" action="" method="POST">
+            <div>
+                <br/>
+                <input type="email" size="20" name="_replyto" placeholder="your email"/>
+            </div>
             <br/>
-            <input type="email" size="20" name="_replyto" placeholder="your email"/>
-        </div>
-        <br/>
-        <div>
-            <textarea name="message" rows="10" cols="20" placeholder="message"></textarea>
-        </div>
-        </br>
-        <div>
-            <input onmousedown="sendContactForm()" type="submit" value="Send">
-        </div>
+            <div>
+                <textarea name="message" rows="10" cols="20" placeholder="message"></textarea>
+            </div>
+            </br>
+            <div>
+                <input onmousedown="sendContactForm()" type="submit" value="Send">
+            </div>
 
-    </form>
+        </form>
+    </div>
 </div>
 </body>
