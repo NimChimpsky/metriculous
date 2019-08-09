@@ -89,5 +89,6 @@ body {
 }
 
 #eulaContainer {
-    content: 'EULA.html'
+    width: 400px;
+    height: 300px;
 }
