@@ -15,7 +15,14 @@
 <div id="title">
     <div><h3>METRICULOUS</h3></div>
 </div>
-<div id="downloadForm">Display eula in scroll able div, provide optional emal input, and download button</div>
+<div id="downloadFormAndEula">
+    <div id="eulaContainer"></div>
+    <div id="downloadForm">
+        <input id="email" type="text"/>
+        <button onclick="toogleDownloadForm()">Cancel</button>
+        <button onclick="submitEmailAndDownload()">Send download link</button>
+    </div>
+</div>
 <div id="rootBody">
 <div id="desc" class="container">
     <div class="transparent">
@@ -27,7 +34,7 @@
         <div>
             <div><em>java -jar metriculous [your-local-git-dir] [port]</em></div>
             <br/>
-            <a href="#" onclick="displayDownloadForm()">
+            <a href="#" onclick="toogleDownloadForm()">
                 <div><img src="resources/download-green.svg" width="10%" alt="Kiwi standing on oval"></div>
                 <div> Download JAR</div>
             </a>

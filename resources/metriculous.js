@@ -5,8 +5,11 @@ function sendContactForm() {
 
 }
 
-function displayDownloadForm() {
-    console.log("display downlaod");
+function toogleDownloadForm() {
     document.getElementById("rootBody").classList.toggle('fade');
-    document.getElementById("downloadForm").classList.toggle('fade');
+    document.getElementById("downloadFormAndEula").classList.toggle('fade');
+}
+
+function submitEmailAndDownload() {
+
 }

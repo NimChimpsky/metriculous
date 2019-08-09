@@ -68,14 +68,14 @@ body {
     text-align: center;
 }
 
-#downloadForm {
+#downloadFormAndEula {
     height: 50px;
     opacity: 0;
     transition: opacity 0.3s;
     /*display: none;*/
 }
 
-#downloadForm.fade {
+#downloadFormAndEula.fade {
     opacity: 1;
 }
 
@@ -86,4 +86,8 @@ body {
 
 #rootBody.fade {
     opacity: 0;
+}
+
+#eulaContainer {
+    content: 'EULA.html'
 }
