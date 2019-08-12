@@ -68,27 +68,21 @@ body {
     text-align: center;
 }
 
+#eulaContainer {
+    float: left;
+    width: 45%;
+}
+
+#downloadForm {
+    width: 45%;
+    float: right;
+}
+
 #downloadFormAndEula {
-    height: 50px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    /*display: none;*/
-}
-
-#downloadFormAndEula.fade {
-    opacity: 1;
-}
-
-#rootBody {
-    opacity: 1;
-    transition: opacity 0.3s;
+    width: 50%;
+    /*height: 50%;*/
 }
 
 #rootBody.fade {
-    opacity: 0;
-}
-
-#eulaContainer {
-    width: 400px;
-    height: 300px;
+    opacity: 0.1;
 }

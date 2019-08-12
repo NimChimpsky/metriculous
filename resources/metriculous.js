@@ -5,9 +5,16 @@ function sendContactForm() {
 
 }
 
-function toogleDownloadForm() {
-    document.getElementById("rootBody").classList.toggle('fade');
-    document.getElementById("downloadFormAndEula").classList.toggle('fade');
+function toggleDownloadForm() {
+    console.log("toggling");
+    var dialog = document.getElementById("downloadFormAndEula");
+    if (!dialog.open) {
+        document.getElementById("downloadFormAndEula").showModal();
+        document.getElementById("rootBody").classList.toggle('fade');
+    } else {
+        document.getElementById("downloadFormAndEula").close();
+        document.getElementById("rootBody").classList.toggle('fade');
+    }
 }
 
 function submitEmailAndDownload() {
