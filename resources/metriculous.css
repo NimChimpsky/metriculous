@@ -77,12 +77,16 @@ body {
     width: 45%;
     float: right;
 }
-
 #downloadFormAndEula {
     width: 50%;
+    border: none;
     /*height: 50%;*/
 }
 
+.highlight {
+    padding: 5px;
+    background-color: palegreen;
+}
 #rootBody.fade {
     opacity: 0.1;
 }

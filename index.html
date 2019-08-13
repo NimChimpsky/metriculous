@@ -115,10 +115,20 @@
                 governed by and construed in accordance with the laws of <span class="country">au</span>.</p>
         </div>
     </div>
-    <div id="downloadForm">
-        <input id="email" type="text"/>
-        <button onclick="toggleDownloadForm()">Cancel</button>
-        <button onclick="submitEmailAndDownload()">Send download link</button>
+    <div id="downloadForm" class="idler">
+        <div>
+            <h2>Download</h2>
+            <br/>
+            <div class="highlight">
+                Enter email address :
+                <input id="email" type="text"/>
+                <button onclick="submitEmailAndDownload()">Send download link</button>
+            </div>
+            <br/>
+            <div style="background-color: lightcoral;padding:5px;">
+                <button onclick="toggleDownloadForm()">Cancel</button>
+            </div>
+        </div>
     </div>
     <div style="clear:both;"></div>
 </dialog>
