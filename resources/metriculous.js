@@ -7,7 +7,6 @@ function sendContactForm() {
 }
 
 function toggleDownloadForm() {
-    console.log("toggling");
     var dialog = document.getElementById("downloadFormAndEula");
     if (!dialog.open) {
         document.getElementById("downloadFormAndEula").showModal();
@@ -21,11 +20,15 @@ function toggleDownloadForm() {
 function submitEmailAndDownload() {
     //and get customer emails!
     // https://metriculous.network/download.html
-    var decoded_return_url = atob("");
-    document.getElementById('_next').value = decoded_return_url;
-
-    var decoded = atob("aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vc2JhdHR5K21ldHJpY3Vsb3VzQGdtYWlsLmNvbQ==");
-    document.getElementById('download-form').action = decoded;
+    // var decoded_return_url = atob("");
+    var decoded_return_url = btoa("https://metriculous.network/metricloaddown.html");
+    console.log("return " + decoded_return_url);
+    var decoded_email_download = btoa("https://formspree.io/support+download@metriculous.network");
+    console.log("email " + decoded_email_download);
+    // document.getElementById('_next').value = decoded_return_url;
+    //
+    // var decoded = atob("aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vc2JhdHR5K21ldHJpY3Vsb3VzQGdtYWlsLmNvbQ==");
+    // document.getElementById('download-form').action = decoded;
 
 
 }
