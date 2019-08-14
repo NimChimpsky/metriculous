@@ -117,11 +117,14 @@
             <h2>Download</h2>
             <br/>
             <div class="highlight">
-                Enter email address :
-                <input id="email" type="text" size="25"/>
-                <div style="text-align: center;padding: 5px">
-                <button onclick="submitEmailAndDownload()">Send download link</button>
-                </div>
+                <form id="download-form" action="" method="POST">
+                    Enter email address :
+                    <input id="email" type="text" size="25"/>
+                    <input type="hidden" id="_next" name="_next" value="c'mon help a dev out"/>
+                    <div style="text-align: center;padding: 5px">
+                        <button onclick="submitEmailAndDownload()">Send download link</button>
+                    </div>
+                </form>
             </div>
             <br/>
             <div style="text-align: center; background-color: lightcoral;padding:5px;">
@@ -184,6 +187,7 @@
             <div>
                 <br/>
                 <input type="email" size="20" name="_replyto" placeholder="your email"/>
+
             </div>
             <br/>
             <div>
