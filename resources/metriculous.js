@@ -53,6 +53,7 @@ $("#download-form").submit(function (e) {
     $.ajax({
         type: "POST",
         url: url,
+        dataType: 'jsonp',
         data: form.serialize(), // serializes the form's elements.
         success: function (data) {
             alert("success"); // show response from the php script.
