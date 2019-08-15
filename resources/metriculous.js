@@ -21,10 +21,10 @@ function submitEmailAndDownload() {
     // https://metriculous.network/download.html
     // var decoded_return_url = atob("");
     // var decoded_return_url = btoa("https://metriculous.network/metricloaddown.html");
-    var decoded_return_url = btoa("aHR0cHM6Ly9tZXRyaWN1bG91cy5uZXR3b3JrL21ldHJpY2xvYWRkb3duLmh0bWw=");
+    var decoded_return_url = atob("aHR0cHM6Ly9tZXRyaWN1bG91cy5uZXR3b3JrL21ldHJpY2xvYWRkb3duLmh0bWw=");
     document.getElementById('_next').value = decoded_return_url;
 
-    var decoded_email_download = btoa("https://formspree.io/support+download@metriculous.network");
+    var decoded_email_download = atob("aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vc3VwcG9ydCtkb3dubG9hZEBtZXRyaWN1bG91cy5uZXR3b3Jr");
     document.getElementById('download-form').action = decoded_email_download;
 
     //
