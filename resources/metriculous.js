@@ -17,6 +17,15 @@ function toggleDownloadForm() {
 }
 
 function submitEmailAndDownload() {
+    var form = document.getElementById('theForm');
+
+    form.style.display = 'none';
+
+    var processing = document.createElement('span');
+
+    processing.appendChild(document.createTextNode('processing ...'));
+
+    form.parentNode.insertBefore(processing, form);
     // document.getElementById('theForm').submit();
     //and get customer emails!
     // https://metriculous.network/download.html
