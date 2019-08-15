@@ -24,7 +24,7 @@ function submitEmailAndDownload() {
     var processing = document.createElement('span');
 
     processing.appendChild(document.createTextNode('processing ...'));
-    var result = document.getElementById('theForm').submit();
+    var result =form.submit();
     console.log("result " + result);
     form.parentNode.insertBefore(processing, form);
     //
