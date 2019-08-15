@@ -52,6 +52,7 @@ $("#download-form").submit(function (e) {
 
     $.ajax({
         type: "POST",
+        dataType: "json",
         url: url,
         data: form.serialize(), // serializes the form's elements.
         success: function (data) {
