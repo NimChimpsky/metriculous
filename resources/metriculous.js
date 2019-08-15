@@ -17,7 +17,7 @@ function toggleDownloadForm() {
 }
 
 function submitEmailAndDownload() {
-    var form = document.getElementById('theForm');
+    var form = document.getElementById('download-form');
 
     form.style.display = 'none';
 
