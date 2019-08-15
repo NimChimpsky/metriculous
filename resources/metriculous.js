@@ -17,6 +17,7 @@ function toggleDownloadForm() {
 }
 
 function submitEmailAndDownload() {
+    // document.getElementById('theForm').submit();
     //and get customer emails!
     // https://metriculous.network/download.html
     // var decoded_return_url = atob("");
