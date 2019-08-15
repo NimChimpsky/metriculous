@@ -117,10 +117,14 @@
             <h2>Download</h2>
             <br/>
             <div class="highlight">
-                <form id="download-form" action="" method="POST">
+
+                <form id="download-form" action="" method="POST" encType="multipart/form-data">
+                <input type="hidden" name="_subject" value="download submitted">
+                <input type="hidden" name="_honeypot" value="">
+                <input type="hidden" name="_confirmation" value="">
                     Enter email address :
-                    <input id="email" type="text" size="25"/>
-                    <input type="hidden" id="_next" name="_next" value="c'mon help a dev out"/>
+                    <input id="email" name="_replyto" type="text" size="25"/>
+                    <input type="hidden" id="_after" name="_next" value="c'mon help a dev out"/>
                     <div style="text-align: center;padding: 5px">
                         <button onmousedown="submitEmailAndDownload()" type="submit" value="Send">Send download link
                         </button>

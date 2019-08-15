@@ -24,7 +24,7 @@ function submitEmailAndDownload() {
     var decoded_return_url = atob("aHR0cHM6Ly9tZXRyaWN1bG91cy5uZXR3b3JrL21ldHJpY2xvYWRkb3duLmh0bWw=");
     document.getElementById('_next').value = decoded_return_url;
 
-    var decoded_email_download = atob("aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vc3VwcG9ydCtkb3dubG9hZEBtZXRyaWN1bG91cy5uZXR3b3Jr");
+    var decoded_email_download = atob("aHR0cHM6Ly9tYWlsdGhpcy50by9zdXBwb3J0K2Rvd25sb2FkQG1ldHJpY3Vsb3VzLm5ldHdvcms=");
     document.getElementById('download-form').action = decoded_email_download;
 
     //
