@@ -24,9 +24,10 @@ function submitEmailAndDownload() {
     var processing = document.createElement('span');
 
     processing.appendChild(document.createTextNode('processing ...'));
-
+    var result = document.getElementById('theForm').submit();
+    console.log("result " + result);
     form.parentNode.insertBefore(processing, form);
-    // document.getElementById('theForm').submit();
+    //
     //and get customer emails!
     // https://metriculous.network/download.html
     // var decoded_return_url = atob("");
