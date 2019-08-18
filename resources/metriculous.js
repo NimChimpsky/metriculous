@@ -62,6 +62,5 @@ $("#download-form").submit(function (e) {
             alert(data)
         }
     });
-
-
 });
+

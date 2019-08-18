@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="resources/metriculous.css">
+<link rel="ja" type="text/css" href="resources/metriculous.css">
+<script defer src="resources/jquery.min.js"></script>
+<script defer src="resources/metriculous.js"></script>
+<script defer src="https://js.stripe.com/v3"></script>
+<script defer>
+    var stripe = Stripe('pk_test_HRVpsbrZpnIvduOx3gZyP5tp00tZJK02FZ');
+
+    var stripe = Stripe('pk_live_9YcsJkMjnui4PxSygNxx94uk00uA8f9waI');
+
+    var checkoutButton = document.getElementById('checkout-button-plan_FeFeLYlNnW8Qj8');
+    checkoutButton.addEventListener('click', function () {
+        // When the customer clicks on the button, redirect
+        // them to Checkout.
+        stripe.redirectToCheckout({
+            items: [{plan: 'plan_FeFeLYlNnW8Qj8', quantity: 1}],
+
+            // Do not rely on the redirect to the successUrl for fulfilling
+            // purchases, customers may not always reach the success_url after
+            // a successful payment.
+            // Instead use one of the strategies described in
+            // https://stripe.com/docs/payments/checkout/fulfillment
+            successUrl: 'https://metriculous.network/success',
+            cancelUrl: 'https://metriculous.network/canceled',
+        })
+            .then(function (result) {
+                if (result.error) {
+                    // If `redirectToCheckout` fails due to a browser or network
+                    // error, display the localized error message to your customer.
+                    var displayError = document.getElementById('error-message');
+                    displayError.textContent = result.error.message;
+                }
+            });
+    });
+</script>
+<button
+        style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+        id="checkout-button-plan_FeFeLYlNnW8Qj8" role="link">
+    Checkout
+</button>
+
+<div id="error-message"></div>
