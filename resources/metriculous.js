@@ -18,15 +18,17 @@ $("#download-form").submit(function (e) {
     var url = form.attr('action');
 
     $.ajax({
-        type: "POST",
+        // type: "POST",
+        type: "POSTMAN",
         dataType: "json",
         url: url,
-        data: form.serialize(), // serializes the form's elements.
+        data: form.serialize(),
         success: function (data) {
-            alert("success download"); // show response from the php script.
+            alert("success download");
         },
         error: function (data) {
-            alert(data)
+            alert("failure");
+            $("#downloadContainer").html('<a href="resources/metriculous.jar"><u>Download JAR</u></a>');
         }
     });
 });
