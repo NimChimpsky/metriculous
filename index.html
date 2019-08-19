@@ -19,7 +19,7 @@
 <div class="small_container">
     <div id="title"><h3>METRICULOUS</h3></div>
     <div id="checkout">Limited time half price subscription available while in pre-release alpha $<font
-            style="text-decoration: line-through;">75</font> 33 usd per month
+            style="text-decoration: line-through;">75</font> $33 usd per month
         <!--<button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"-->
         <!--id="checkout-button-plan_FeFy0svDWw52T2" role="link">-->
         <!--Checkout Test-->
@@ -134,72 +134,66 @@
             <br/>
             <div class="highlight">
 
-                <form class="ajaxForm" id="download-form" action="https://formcarry.com/s/nIS6YIOxcjx" method="POST"
-                      accept-charset="UTF-8">
+                <form class="ajaxForm" id="download-form" action="https://formcarry.com/s/nIS6YIOxcjx" method="POST" accept-charset="UTF-8">
                     <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
-                    Enter email address :
-                    <input id="email" name="email" type="text" size="25"/>
-                    <input type="hidden" id="_after" name="_next" value="c'mon help a dev out"/>
-                    <div style="text-align: center;padding: 5px">
-                        <button type="submit" value="Send">Send download link
-                        </button>
-                    </div>
+                    <input id="email" name="email" type="text" size="25" placeholder="Email"/>
+                    <input type="hidden" id="_after" name="_next" value="afsadsadsa"/>
+                    <button type="submit" value="Send">Submit receive download link</button>
                 </form>
             </div>
             <br/>
             <div style="text-align: center; background-color: lightcoral;padding:5px;">
                 <button onclick="toggleDownloadForm()">Cancel</button>
             </div>
-            <p>We will only send two emails the link to download our jar, and notification when the full paid version is
-                available. Thats it, no others.</p>
+            <p>We will only send one email, notification when the full release version is available.</p>
         </div>
     </div>
     <div style="clear:both;"></div>
 </dialog>
 <div>
-<div id="desc" class="container">
-    <div class="transparent">
-        <div>Stats on your code repository, packaged as a java microservice. <br/>
-            Lightweight embedded web server and user interface.
-        </div>
-        <div style="height: 15px;"></div>
+    <div id="desc" class="container">
+        <div class="transparent">
+            <div>Stats on your code repository, packaged as a java microservice. <br/>
+                Lightweight embedded web server and user interface.
+            </div>
+            <div style="height: 15px;"></div>
 
-        <div>
-            <div><em>java -jar metriculous [your-local-git-dir] [port]</em></div>
-            <br/>
-            <a href="#" onclick="toggleDownloadForm()">
-                <div><img src="resources/download-green.svg" width="10%" alt="Download Jar"></div>
-                <div>Download JAR</div>
-            </a>
-            <br/>
-            <div><em>java -jar metriculous '/Users/myPath/myRepo' 8080</em></div>
-            or on windows
-            <div><em>java -jar metriculous 'C:/myPath/myRepo' 8080</em></div>
-            <br/>
-            Alternatively, a full settings and license file (human readable) can be placed in your home directory.
+            <div>
+                <div><em>java -jar metriculous [your-local-git-dir] [port]</em></div>
+                <br/>
+                <a href="#" onclick="toggleDownloadForm()">
+                    <div><img src="resources/download-green.svg" width="10%" alt="Download Jar"></div>
+                    <div>Download JAR</div>
+                </a>
+                <br/>
+                <div><em>java -jar metriculous '/Users/myPath/myRepo' 8080</em></div>
+                or on windows
+                <div><em>java -jar metriculous 'C:/myPath/myRepo' 8080</em></div>
+                <br/>
+                Alternatively, a full settings and license file (human readable) can be placed in your home directory.
+            </div>
+        </div>
+        <div class="transparent" style="text-align: left">
+            Selected Features
+            <ul>
+                <li>Pulse on steroids</li>
+                <li>Most edited file (per person, or from whole repository</li>
+                <li>When is code committed - calendar based summary for individuals and files</li>
+                <li>Files with most authors</li>
+                <li>Most productive coder - number of lines in production</li>
+                <li>Drill down to actual commits</li>
+            </ul>
+            Still to come ...
+            <ul>
+                <li>Hotspots - Files that are most commonly edited / have merge conflicts</li>
+                <li>Percentage of code that stays in production without being refactored by someone else.
+                </li>
+                <li>Common conflicts between team members.
+                </li>
+            </ul>
+            <div>All presented with simple to read graphs and charts, and a http api for direct access to data.</div>
         </div>
     </div>
-    <div class="transparent" style="text-align: left">
-        Selected Features
-        <ul>
-            <li>Pulse on steroids</li>
-            <li>Most edited file (per person, or from whole repository</li>
-            <li>When is code committed - calendar based summary for individuals and files</li>
-            <li>Files with most authors</li>
-            <li>Most productive coder - number of lines in production</li>
-            <li>Drill down to actual commits</li>
-        </ul>
-        Still to come ...
-        <ul>
-            <li>Hotspots - Files that are most commonly edited / have merge conflicts</li>
-            <li>Percentage of code that stays in production without being refactored by someone else.
-            </li>
-            <li>Common conflicts between team members.
-            </li>
-        </ul>
-        <div>All presented with simple to read graphs and charts, and a http api for direct access to data.</div>
-    </div>
-</div>
 
     <div id="contact-form-div" class="transparent" style="width:250px;">
         Contact us
