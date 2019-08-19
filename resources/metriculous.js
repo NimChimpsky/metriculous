@@ -28,7 +28,7 @@ $("#download-form").submit(function (e) {
         },
         error: function (data) {
             alert("failure");
-            $("#downloadContainer").html('<a href="resources/metriculous.jar"><u>Download JAR</u></a>');
+            $("#downloadContainer").html('<a href="resources/metriculous.jar"><b><u>Download JAR</u></b></a>');
         }
     });
 });
