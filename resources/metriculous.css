@@ -31,6 +31,16 @@ body {
     font-family: Idler;
 }
 
+.small_container {
+    display: grid;
+    /* Display as a Grid */
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 400px));
+    /* repeat = as many times as you can fit */
+    /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
+    /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
+    grid-gap: 15px;
+}
+
 .container {
     display: grid;
     /* Display as a Grid */
@@ -47,11 +57,7 @@ body {
     padding: 25px;
 }
 
-#title {
-    text-align: left;
-    font-family: Idler;
-    font-size: 2em;
-}
+
 
 #contact-form-div {
     text-align: left;
@@ -89,4 +95,16 @@ body {
 }
 #rootBody.fade {
     opacity: 0.1;
+}
+
+#title {
+    padding: 5px;
+    font-family: Idler;
+    font-size: 2em;
+}
+
+#checkout {
+    padding: 5px;
+    font-family: Idler;
+    font-size: 1em;
 }
