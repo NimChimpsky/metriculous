@@ -27,8 +27,7 @@ $("#download-form").submit(function (e) {
             alert("success download");
         },
         error: function (data) {
-            alert("failure");
-            $("#downloadContainer").html('<a href="resources/metriculous.jar"><b><u>Download JAR</u></b></a>');
+            $("#downloadContainer").html('<div style="text-align: center"><a href="resources/metriculous.jar"><b><u>Link to JAR</u></b></a></div>');
         }
     });
 });
@@ -46,10 +45,10 @@ $("#contact-form").submit(function (e) {
         url: url,
         data: form.serialize(), // serializes the form's elements.
         success: function (data) {
-            alert("success contact"); // show response from the php script.
+            alert("Thanks for the message. One of our team will respond asap.");
         },
         error: function (data) {
-            alert(data)
+            alert("Apologies, unable to communicate please use email/twitter instead");
         }
     });
 });

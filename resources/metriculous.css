@@ -84,7 +84,7 @@ body {
     float: right;
 }
 #downloadFormAndEula {
-    width: 50%;
+    width: 60%;
     border: none;
     /*height: 50%;*/
 }
@@ -107,4 +107,12 @@ body {
     padding: 5px;
     font-family: Idler;
     font-size: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+.verticalSpacer50px {
+    height: 50px;
 }
