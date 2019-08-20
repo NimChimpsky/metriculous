@@ -15,14 +15,6 @@ a:visited {
     text-decoration: none
 }
 
-body {
-    /*background: url(background.png);*/
-    /*background-size: 100% 100%;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    /*font-family: 'Roboto', sans-serif;*/
-}
-
 .space {
     height: 30px;
 }
@@ -57,13 +49,12 @@ body {
     padding: 25px;
 }
 
-
-
 #contact-form-div {
     text-align: left;
     font-family: Idler;
     font-size: 1.5em;
 }
+
 #header {
     text-align: right;
     font-family: Idler;
