@@ -84,13 +84,13 @@ a:visited {
 #title {
     padding: 5px;
     font-family: Idler;
-    /*font-size: 2em;*/
+    font-size: 2em;
 }
 
 #checkout {
     padding: 5px;
-    font-family: Idler;
-    /*font-size: 1em;*/
+    /*font-family: Idler;*/
+    font-size: 1em;
 }
 
 footer {
