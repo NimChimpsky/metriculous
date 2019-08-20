@@ -97,7 +97,7 @@ a:visited {
 #checkout {
     padding: 5px;
     font-family: Idler;
-    font-size: 1em;
+    /*font-size: 1em;*/
 }
 
 footer {
