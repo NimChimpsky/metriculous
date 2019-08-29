@@ -24,10 +24,10 @@ $("#download-form").submit(function (e) {
         url: url,
         data: form.serialize(),
         success: function (data) {
-            alert("success download");
+            $("#downloadContainer").html('<div style="text-align: center"><a href="resources/metriculous.jar"><b><u>Link to JAR</u></b></a></div>');
         },
         error: function (data) {
-            $("#downloadContainer").html('<div style="text-align: center"><a href="resources/metriculous.jar"><b><u>Link to JAR</u></b></a></div>');
+            alert("Unable to validate email, please contact support@metriculous.network");
         }
     });
 });
@@ -48,7 +48,7 @@ $("#contact-form").submit(function (e) {
             alert("Thanks for the message. One of our team will respond asap.");
         },
         error: function (data) {
-            alert("Apologies, unable to communicate please use email/twitter instead");
+            alert("Apologies, unable to communicate please use email");
         }
     });
 });
