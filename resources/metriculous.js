@@ -28,7 +28,8 @@ $("#download-form").submit(function (e) {
         url: url,
         data: form.serialize(),
         success: function (data) {
-            $("#downloadContainer").html('<div style="text-align: center"><a href="resources/metriculous.jar"><b><u>Link to JAR</u></b></a></div>');
+            // $("#downloadContainer").html('<div style="text-align: center"><a href="resources/metriculous.jar"><b><u>Link to JAR</u></b></a></div>');
+            $("#downloadContainer").html('<div style="text-align: center">We will email you the prototype shortly</div>');
         },
         error: function (data) {
             alert("Unable to validate email, please contact support@metriculous.network");
