@@ -13,6 +13,7 @@ function toggleDownloadForm() {
 $("#download-form").submit(function (e) {
 
     e.preventDefault(); // avoid to execute the actual submit of the form.
+    var email = document.getElementById("download-email").value;
     if (!validateEmail(email)) {
         alert("Email validation failed, please correct address or email us support@metriculous.network");
         return;
