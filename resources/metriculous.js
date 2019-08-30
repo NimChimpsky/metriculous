@@ -19,7 +19,7 @@ $("#download-form").submit(function (e) {
 
     $.ajax({
         // type: "POST",
-        type: "POSTMAN",
+        type: "POST",
         dataType: "json",
         url: url,
         data: form.serialize(),
