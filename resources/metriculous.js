@@ -46,8 +46,8 @@ $("#contact-form").submit(function (e) {
         data: form.serialize(), // serializes the form's elements.
         success: function (data) {
             alert("Thanks for the message. One of our team will respond asap.");
-            document.getElementById("context-email").value = "";
-            document.getElementById("context-message").value = "";
+            document.getElementById("contact-email").value = "";
+            document.getElementById("contact-message").value = "";
         },
         error: function (data) {
             alert("Apologies, unable to communicate please use email");
