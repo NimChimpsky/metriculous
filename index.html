@@ -1,224 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="resources/metriculous.css">
-<link rel="ja" type="text/css" href="resources/metriculous.css">
-
-<script defer src="resources/jquery.min.js"></script>
-<script defer src="resources/metriculous.js"></script>
-<script defer src="https://js.stripe.com/v3"></script>
-<!--<script defer src="resources/payment-test.js"></script>-->
-<script defer src="resources/payment.js"></script>
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="description" content="GIT Statistics">
     <meta name="keywords" content="GIT, GITPRIME, code, metrics">
     <meta name="google-site-verification" content="9KKSSlK4AsyY2gT_unMCLm79QzA8AXugHtzbjArEX1A"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M E T R I C U L O U S</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metriculous : code metrics done right, and open source</title>
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">-->
+    <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/materia/bulmaswatch.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="https://js.stripe.com/v3"></script>
+    <!--<script defer src="resources/payment-test.js"></script>-->
+    <script defer src="resources/payment.js"></script>
+    <script defer src="resources/metriculous.js"></script>
+    <!--<script defer src="resources/js/font-awesome.js"></script>-->
 </head>
-<body style="background-color: ghostwhite;color:black" class="idler" id="rootBody">
-<div class="small_container">
-    <div id="title">METRICULOUS</div>
-    <div id="checkout">½ price subscription while in pre-release alpha $<font
-            style="text-decoration: line-through;">75</font> $33 usd per month
-        <!--<button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"-->
-        <!--id="checkout-button-plan_FeFy0svDWw52T2" role="link">-->
-        <!--Checkout Test-->
-        <!--</button>-->
-        <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor: pointer;"
-                id="checkout-button-plan_FeHN5cnkfrylKr" role="link">
-            Checkout
-        </button>
-    </div>
-</div>
+<body>
+<nav class="navbar is-white">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+            <img src="resources/images/crab-logo.png" alt="Metriculous : sourcecode metrics" width="50" height="50">
+        </a>
+        <a class="navbar-item" href="">
+            <h2 class="title is-2"> Metriculous </h2>
+        </a>
 
-<dialog id="downloadFormAndEula">
-    <div style="float:right">
-        <button onclick="toggleDownloadForm()">X</button>
-    </div>
-    <!--https://stackoverflow.com/questions/6348207/making-a-paragraph-in-html-contain-a-text-from-a-file-->
-    <div id="eulaContainer">
-        <div>
-            <h2>End-User License Agreement (EULA) of <span class="app_name">Metriculous</span></h2>
-
-            <p>This End-User License Agreement ("EULA") is a legal agreement between you and <span class="company_name">Metric Software</span>
-            </p>
-
-            <p>This EULA agreement governs your acquisition and use of our <span class="app_name">Metriculous</span>
-                software
-                ("Software") directly from <span class="company_name">Metric Software</span> or indirectly through a
-                <span
-                        class="company_name">Metric Software</span> authorized reseller or distributor (a "Reseller").
-            </p>
-
-            <p>Please read this EULA agreement carefully before completing the installation process and using the <span
-                    class="app_name">Metriculous</span> software. It provides a license to use the <span
-                    class="app_name">Metriculous</span> software and contains warranty information and liability
-                disclaimers.</p>
-
-            <p>If you register for a free trial of the <span class="app_name">Metriculous</span> software, this EULA
-                agreement will also govern that trial. By clicking "accept" or installing and/or using the <span
-                        class="app_name">Metriculous</span> software, you are confirming your acceptance of the Software
-                and agreeing to become bound by the terms of this EULA agreement.</p>
-
-            <p>If you are entering into this EULA agreement on behalf of a company or other legal entity, you represent
-                that you have the authority to bind such entity and its affiliates to these terms and conditions. If you
-                do not have such authority or if you do not agree with the terms and conditions of this EULA agreement,
-                do not install or use the Software, and you must not accept this EULA agreement.</p>
-
-            <p>This EULA agreement shall apply only to the Software supplied by <span
-                    class="company_name">Metric Software</span> herewith regardless of whether other software is
-                referred to or
-                described herein. The terms also apply to any <span class="company_name">Metric Software</span> updates,
-                supplements, Internet-based services, and support services for the Software, unless other terms
-                accompany those
-                items on delivery. If so, those terms apply. This EULA was created by <a
-                        href="https://www.eulatemplate.com">EULA
-                    Template</a> for <span class="app_name">Metriculous</span>.
-
-            <h3>License Grant</h3>
-
-            <p><span class="company_name">Metric Software</span> hereby grants you a personal, non-transferable,
-                non-exclusive
-                licence to use the <span class="app_name">Metriculous</span> software on your devices in accordance with
-                the
-                terms of this EULA agreement.</p>
-
-            <p>You are permitted to load the <span class="app_name">Metriculous</span> software (for example a PC,
-                laptop, mobile or tablet) under your control. You are responsible for ensuring your device meets the
-                minimum requirements of the <span class="app_name">Metriculous</span> software.</p>
-
-            <p>You are not permitted to:</p>
-
-            <ul>
-                <li>Edit, alter, modify, adapt, translate or otherwise change the whole or any part of the Software nor
-                    permit the whole or any part of the Software to be combined with or become incorporated in any other
-                    software, nor decompile, disassemble or reverse engineer the Software or attempt to do any such
-                    things
-                </li>
-                <li>Reproduce, copy, distribute, resell or otherwise use the Software for any commercial purpose</li>
-                <li>Allow any third party to use the Software on behalf of or for the benefit of any third party</li>
-                <li>Use the Software in any way which breaches any applicable local, national or international law</li>
-                <li>use the Software for any purpose that <span class="company_name">Metric Software</span> considers is
-                    a breach of this EULA agreement
-                </li>
-            </ul>
-
-            <h3>Intellectual Property and Ownership</h3>
-
-            <p><span class="company_name">Metric Software</span> shall at all times retain ownership of the Software as
-                originally downloaded by you and all subsequent downloads of the Software by you. The Software (and the
-                copyright, and other intellectual property rights of whatever nature in the Software, including any
-                modifications made thereto) are and shall remain the property of <span class="company_name">Metric Software</span>.
-            </p>
-
-            <p><span class="company_name">Metric Software</span> reserves the right to grant licences to use the
-                Software to third parties.</p>
-
-            <h3>Termination</h3>
-
-            <p>This EULA agreement is effective from the date you first use the Software and shall continue until
-                terminated. You may terminate it at any time upon written notice to <span class="company_name">Metric Software</span>.
-            </p>
-
-            <p>It will also terminate immediately if you fail to comply with any term of this EULA agreement. Upon such
-                termination, the licenses granted by this EULA agreement will immediately terminate and you agree to
-                stop all access and use of the Software. The provisions that by their nature continue and survive will
-                survive any termination of this EULA agreement.</p>
-
-            <h3>Governing Law</h3>
-
-            <p>This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be
-                governed by and construed in accordance with the laws of <span class="country">au</span>.</p>
+        <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fab fa-github"></i>
+        </span>
+        </a>
+        <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
+        <span class="icon" style="color: #55acee;">
+          <i class="fab fa-twitter"></i>
+        </span>
+        </a>
+        <div class="navbar-burger burger" data-target="navMenuExample8">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
-    <div id="downloadForm" class="idler">
+    <div id="navMenuExample8" class="navbar-menu">
+        <div class="navbar-start">
 
-        <h2>Download</h2>
-        <br/>
-        <div id="downloadContainer">
-            <div class="highlight">
 
-                <form class="ajaxForm" id="download-form" action="https://formcarry.com/s/nIS6YIOxcjx" method="POST"
-                      accept-charset="UTF-8">
-                    <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
-                    <input name="email" id="download-email" type="text" size="30" placeholder="Email"/>&nbsp;
-                    <button type="submit" value="Send">Receive download link</button>
-                </form>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="button " href="https://github.com/NimChimpsky/metriculous-root">
+                             <span class="icon" title="Commercial licenses are required">
+                                <i class="fab fa-github-alt"></i>
+                                 <!--<i class="fa fa-download"></i>-->
+                                </span>
+                            <span title="Commercial licenses are required">Open source</span>
+                        </a>
+                    </p>
+                    <p class="control">
+                        <a class="button is-success" href="#"
+                           onclick="document.getElementById('contact-form-div').classList.toggle('is-active');">
+                             <span class="icon">
+
+                                <i class="fas fa-envelope-open"></i>
+                                 <!--<i class="fa fa-download"></i>-->
+                                </span>
+                            <span>Contact</span>
+                        </a>
+                    </p>
+                    <p class="control">
+
+                        <button class="button is-primary" href="" id="checkout-button-plan_FeHN5cnkfrylKr" role="link">
+                             <span class="icon">
+                                <i class="fas fa-credit-card"></i>
+                                 <!--<i class="fa fa-download"></i>-->
+                                </span>
+                            <span title="Pre-alpha is half price : $33 usd per month">Purchase</span>
+                        </button>
+                    </p>
+                </div>
             </div>
-            <br/>
-            <div style="text-align: center; background-color: lightcoral;padding:5px;">
-                <button onclick="toggleDownloadForm()">Cancel</button>
+        </div>
+    </div>
+</nav>
+<section class="section">
+    <div class="content">
+        <div class="columns">
+            <div class="column">
+                <h3>Intro + Download</h3>
+                <p> Stats on your code repository, packaged as a java microservice.
+                    Lightweight embedded web server and user interface (<500kbs total download).
+                </p>
+                <!--<p class="notification">-->
+                <p>
+                    <em>java -jar metriculous.jar -repoPath [your-git-dir] -port [your-port]</em>
+                </p>
+                <p class="has-text-centered" title="Free 1 month trial">
+                    <a class="button is-rounded is-info" href="resources/metriculous.jar">
+                     <span class="icon">
+                                <i class="fas fa-download"></i>
+                         <!--<i class="fa fa-download"></i>-->
+                                </span>
+                        <span>Download Jar</span>
+                    </a>
+                </p>
+                <p>For example
+                <ul>
+                    <li>java -jar metriculous.jar -repoPath '/Users/myPath/myRepo' -port 8080 <em>or</em></li>
+                    <li> java -jar metriculous.jar -repoPath 'C:/myPath/myRepo' -port 8080</li>
+                </ul>
+                <p>
+                    Alternatively, a full settings and license file (human readable) can be placed in your home
+                    directory.
+                    Please use contact form to request.
+                </p>
             </div>
-            <p>We will only send one email, notification when the full release version is available.</p>
+            <div class="column">
+                <h2> Selected Features</h2>
+                <ul>
+                    <li> Hot-spots, code that is most commonly edited (you need to refactor)</li>
+                    <li> Extra-Hot-spots, code with most merge conflicts (you really need to refactor)</li>
+                    <li> Percentage of code that stays in production without being refactored by someone else.</li>
+                    <li> Common conflicts between team members.</li>
+                    <li> Most edited file (per person, or from whole repository</li>
+                    <li> When is code committed - calendar based summary for individuals and files</li>
+                    <li> Files with most authors</li>
+                    <li> Drill down to actual commits</li>
+                    <li> Rapid feedback and implementation of new feature requests</li>
+                </ul>
+                <p>Pulse on steroids. All presented with simple to read graphs and charts, and a http api for direct
+                    access to data.</p>
+            </div>
         </div>
     </div>
-    <div style="clear:both;"></div>
-</dialog>
-
-
-<div id="desc" class="container">
-    <div class="transparent">
-        <div>Stats on your code repository, packaged as a java microservice. <br/>
-            Lightweight embedded web server and user interface (<500kbs total download).
-        </div>
-        <div style="height: 15px;"></div>
-
-        <div>
-            <div><em>java -jar metriculous.jar -repoPath [your-git-dir] -port [your-port]</em></div>
-            <br/>
-            <a href="#" onclick="toggleDownloadForm()">
-                <div><img src="resources/download-green.svg" width="10%" alt="Download Jar"></div>
-                <div style="color:#91DC5A;"><b>Download JAR (Free for 3 months)</b></div>
-            </a>
-            <br/>
-            <div><em>java -jar metriculous.jar -repoPath '/Users/myPath/myRepo' -port 8080</em></div>
-            or on windows
-            <div><em>java -jar metriculous.jar -repoPath 'C:/myPath/myRepo' -port 8080</em></div>
-            <br/>
-            Alternatively, a full settings and license file (human readable) can be placed in your home directory.
-            <p>As an example the popular java library Guava, takes 4 minutes for a full scan</p>
-        </div>
-    </div>
-    <div class="transparent" style="text-align: left">
-        Selected Features
-        <ul>
-            <li>Pulse on steroids</li>
-            <li>Most edited file (per person, or from whole repository</li>
-            <li>When is code committed - calendar based summary for individuals and files</li>
-            <li>Files with most authors</li>
-            <li>Most productive coder - number of lines in production</li>
-            <li>Drill down to actual commits</li>
-        </ul>
-        Still to come ...
-        <ul>
-            <li>Hotspots - Files that are most commonly edited / have merge conflicts</li>
-            <li>Percentage of code that stays in production without being refactored by someone else.
-            </li>
-            <li>Common conflicts between team members.
-            </li>
-        </ul>
-        <div>All presented with simple to <a href="screenshots.html" alt="Screenshots"><u><font style="color: blue"> read graphs and charts</font></u></a>,
-            and a http api for direct access to data.
+    <div class="content">
+        <div class="columns">
+            <div class="column">
+                <h3>Screenshot 1</h3>
+                <div id="screenshot1" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content" style="height:1040px;width:1920px">
+                        <p class="image" style="height:1040px;width:1920px">
+                            <img src="resources/screenshots/005.jpg" alt="">
+                        </p>
+                    </div>
+                    <button class="modal-close is-large" aria-label="close"
+                            onclick="document.getElementById('screenshot1').classList.toggle('is-active')"></button>
+                </div>
+                <figure class="image is-128x128">
+                    <img src="resources/screenshots/005.jpg"
+                         onclick="document.getElementById('screenshot1').classList.toggle('is-active')">
+                </figure>
+            </div>
+            <div class="column">
+                <h3>Screenshot 2</h3>
+            </div>
+            <div class="column">
+                <h3>Screenshot 3</h3>
+            </div>
+            <div class="column">
+                <h3>Screenshot 4</h3>
+            </div>
         </div>
     </div>
-    <div id="contact-form-div" class="transparent" style="width:250px;">
-        Contact us :
-        <form class="ajaxForm" id="contact-form" action="https://formcarry.com/s/nIS6YIOxcjx" method="POST" accept-charset="UTF-8">
+</section>
+<div id="contact-form-div" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content has-background-white">
+        <form class="ajaxForm" id="contact-form" action="https://formcarry.com/s/nIS6YIOxcjx" method="POST"
+              accept-charset="UTF-8">
             <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
-            <input name="email" id="contact-email" type="text" size="25" placeholder="Email"/>
-            <br/> <br/>
-            <textarea name="message" id="contact-message" rows="10" cols="25" placeholder="message"></textarea> <br/>
-            <button type="submit" value="Send"/>
-            Send</button>
+
+
+            <div class="field">
+                <label class="label">Your Email</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="email" id="contact-email" name="email" placeholder="me@mydomain.com"
+                           value="">
+                    <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                </div>
+                <!--<span class="icon is-small is-right">-->
+                <!--<i class="fas fa-exclamation-triangle"></i>-->
+                <!--</span>-->
+                <!--</div>-->
+                <!--<p class="help is-danger">This email is invalid</p>-->
+            </div>
+            <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                    <textarea name="message" id="contact-message" class="textarea"
+                              placeholder="I want to know"></textarea>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light">Cancel</button>
+                </div>
+            </div>
         </form>
     </div>
+    <button class="modal-close is-large" aria-label="close"
+            onclick="document.getElementById('contact-form-div').classList.toggle('is-active');"></button>
 
 </div>
-<div class="verticalSpacer150px"></div>
-<footer>
-    <img src="resources/contact.png"> &nbsp;
-</footer>
 </body>
 </html>
